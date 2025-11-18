@@ -24,7 +24,6 @@ def build_graph_from_matrix(cost_matrix: np.ndarray) -> nx.DiGraph:
 
     return G
 
-
 # Heuristic for A* function
 def euclidean_heuristic_factory(
     coords: np.ndarray,
@@ -63,9 +62,7 @@ def _reconstruct_path(pred: Dict[Any, Any], source: Any, target: Any) -> List[An
     path.reverse()
     return path
 
-
 # Single-pair variants with frontier, cost, best path, status
-
 def dijkstra_with_frontier(
     G: nx.DiGraph,
     source: Hashable,
@@ -218,7 +215,6 @@ def bellman_ford_with_frontier(
         "status": "ok",
     }
 
-
 def astar_with_frontier(
     G: nx.DiGraph,
     source: Hashable,
@@ -308,8 +304,7 @@ def all_pairs_dijkstra(
     """
     Run Dijkstra from every node (assumes NON-NEGATIVE edge weights).
 
-    Returns
-    -------
+    Returns:
     costs[source][target] = shortest distance
     paths[source][target] = list of nodes along the path
     """
@@ -357,9 +352,6 @@ def all_pairs_astar(
     """
     Run A* between all ordered pairs of distinct nodes.
     This is mainly for COMPARISON; it's O(n^2) A* runs.
-
-    IMPORTANT: A* assumes NON-NEGATIVE edge weights and an
-    admissible heuristic.
     """
     costs: Dict[int, Dict[int, float]] = {u: {} for u in G.nodes}
     paths: Dict[int, Dict[int, List[int]]] = {u: {} for u in G.nodes}
@@ -379,8 +371,7 @@ def all_pairs_astar(
                 continue
 
     return costs, paths
-
-
+    
 # Utility: find global best positive path function  
 def best_positive_path(
     costs: Dict[int, Dict[int, float]],
@@ -389,7 +380,6 @@ def best_positive_path(
     """
     Among all pairs, find the (source, target) with the smallest
     strictly positive cost.
-
     Returns ( (source, target), path, cost ).
     If nothing positive is found, returns ((None, None), [], np.inf).
     """
