@@ -105,11 +105,11 @@ and the reason other algorithms are faster in this problem because they are bett
 
 ##  Algorithm Comparison
 
-| Algorithm | Edge Weights | Negative Cycles | Typical Nodes Explored | Best Use Case |
+| Algorithm | Edge Weights | Negative Cycles | Typical Nodes Explored |
 |-----------|--------------|-----------------|----------------------|---------------|
-| **Dijkstra** | Non-negative only | Cannot detect | Medium | Dense graphs, non-negative weights |
-| **Bellman-Ford** | Any (including negative) | Can detect | High | Sparse graphs, negative weights possible |
-| **A\*** | Non-negative only | Cannot detect | Low | When good heuristic available |
+| **Dijkstra** | Non-negative only | Cannot detect | Medium |
+| **Bellman-Ford** | Any (including negative) | Can detect | High |
+| **A\*** | Non-negative only | Cannot detect | Low |
 
 
 ### Customizing Parameters
