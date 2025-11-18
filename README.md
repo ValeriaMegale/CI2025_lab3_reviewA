@@ -106,7 +106,7 @@ and the reason other algorithms are faster in this problem because they are bett
 ##  Algorithm Comparison
 
 | Algorithm | Edge Weights | Negative Cycles | Typical Nodes Explored |
-|-----------|--------------|-----------------|----------------------|---------------|
+|-----------|--------------|-----------------|----------------------|
 | **Dijkstra** | Non-negative only | Cannot detect | Medium |
 | **Bellman-Ford** | Any (including negative) | Can detect | High |
 | **A\*** | Non-negative only | Cannot detect | Low |
