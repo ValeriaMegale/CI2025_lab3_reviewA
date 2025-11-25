@@ -95,6 +95,9 @@ def dijkstra_with_frontier(
     frontier: List[Hashable] = []
     heap: List[Tuple[float, Hashable]] = [(0.0, source)]
 
+    # Pre-check for negative weights
+    if any(data.get("weight", 1.0) < 0 for u, v, data in G.edges(data=True)):
+        raise ValueError("Dijkstra's algorithm does not support negative edge weights.")
     while heap:
         d, u = heappop(heap)
         if d > dist[u]:
