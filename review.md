@@ -1,5 +1,5 @@
 
-### II. Conceptual Improvements and Justification for Fixes
+### Conceptual Improvements and Justification for Fixes
 
 While the overall structure is correct, certain implementation choices needed refinement to ensure the algorithms operate reliably across all edge cases of their defined domains.
 
